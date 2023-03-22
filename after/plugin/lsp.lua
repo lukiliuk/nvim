@@ -4,7 +4,8 @@ lsp.preset("recommended")
 
 lsp.ensure_installed({
   'tsserver',
-  'pyright'
+  'pyright',
+  'angularls'
 })
 
 
@@ -33,6 +34,8 @@ lsp.configure('pyright', {
       }
   }
 })
+
+vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
 
 
 local cmp = require('cmp')
