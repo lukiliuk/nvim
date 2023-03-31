@@ -1,8 +1,12 @@
 local toggleterm = require("toggleterm")
 
+vim.keymap.set({ "i", "n", "t" }, "<leader>t", "<CMD>ToggleTerm<CR>", {
+    desc = "Open floating terminal.",
+  })
+
+
 toggleterm.setup{
     size = vim.api.nvim_win_get_width(0) - 1,
-	open_mapping = [[<c-\>]],
 	hide_numbers = true,
 	shade_filetypes = {},
 	shade_terminals = true,

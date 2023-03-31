@@ -1,18 +1,18 @@
-vim.keymap.set("n", "<leader>tt", "<cmd>TroubleToggle<cr>",
+vim.keymap.set("n", "<leader>Tt", "<cmd>TroubleToggle<cr>",
   {silent = true, noremap = true, desc = "Toggle Trouble"}
 )
-vim.keymap.set("n", "<leader>tw", "<cmd>TroubleToggle workspace_diagnostics<cr>",
+vim.keymap.set("n", "<leader>Tw", "<cmd>TroubleToggle workspace_diagnostics<cr>",
   {silent = true, noremap = true}
 )
-vim.keymap.set("n", "<leader>td", "<cmd>TroubleToggle document_diagnostics<cr>",
+vim.keymap.set("n", "<leader>Td", "<cmd>TroubleToggle document_diagnostics<cr>",
   {silent = true, noremap = true}
 )
-vim.keymap.set("n", "<leader>tl", "<cmd>TroubleToggle loclist<cr>",
+vim.keymap.set("n", "<leader>Tl", "<cmd>TroubleToggle loclist<cr>",
   {silent = true, noremap = true}
 )
-vim.keymap.set("n", "<leader>tq", "<cmd>TroubleToggle quickfix<cr>",
+vim.keymap.set("n", "<leader>Tq", "<cmd>TroubleToggle quickfix<cr>",
   {silent = true, noremap = true}
 )
-vim.keymap.set("n", "tr", "<cmd>TroubleToggle lsp_references<cr>",
+vim.keymap.set("n", "Tr", "<cmd>TroubleToggle lsp_references<cr>",
   {silent = true, noremap = true}
 )
