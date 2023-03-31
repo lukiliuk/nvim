@@ -1,29 +1,21 @@
 require'nvim-web-devicons'.setup {}
-local setup, nvimtree = pcall(require, "nvim-tree")
-if not setup then return end
+local  nvimtree = require("nvim-tree")
 
 local function open_nvim_tree(data)
-
-  
-    local directory = vim.fn.isdirectory(data.file) == 1
-    -- buffer is a [No Name]
-    local no_name = data.file == "" and vim.bo[data.buf].buftype == ""
+    local directory = vim.fn.isdirectory(data.file) == 1 -- 
+    local no_name = data.file == "" and vim.bo[data.buf].buftype == "" -- buffer is a [No Name]
   
     if not no_name and not directory then
       return
     end
-  
-    -- open the tree, find the file but don't focus it
+
     require("nvim-tree.api").tree.toggle({ focus = true, find_file = true, })
   end
 
-  vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
+vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- toggle file explorer
 
--- vim.opt.foldmethod = "expr"
--- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
--- vim.opt.foldenable = false --                  " Disable folding at startup.
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
@@ -66,10 +58,10 @@ nvimtree.setup({
       return math.floor(vim.opt.columns:get() * WIDTH_RATIO)
     end,
   },
-  -- filters = {
-  --   custom = { "^.git$" },
-  -- },
-  -- renderer = {
-  --   indent_width = 1,
-  -- },
+  filters = {
+    custom = { "^.git$", "^.vscode$", "^.angular$", "^venv$" },
+  },
+  renderer = {
+    indent_width = 4,
+  },
 })
