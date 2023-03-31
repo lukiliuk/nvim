@@ -9,6 +9,10 @@ local function open_nvim_tree(data)
       return
     end
 
+    if directory then
+    vim.api.nvim_command(":enew")
+    end
+
     require("nvim-tree.api").tree.toggle({ focus = true, find_file = true, })
   end
 
