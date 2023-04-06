@@ -2,6 +2,7 @@ vim.g.mapleader = " "
 
 -- NORMAL MODE
 -- vim.keymap.set("n", "<leader>e", vim.cmd.Ex, {desc = "Open File Explorer"})
+vim.keymap.set("n", "0", "^", {desc = "Move at the start of the line"})
 vim.keymap.set("n", "<leader>w", vim.cmd.write, {desc = "Save File"})
 vim.keymap.set("n", "<leader>q", vim.cmd.quit, {desc = "Quit"})
 
