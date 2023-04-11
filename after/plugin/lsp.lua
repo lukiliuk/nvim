@@ -85,7 +85,7 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("n", "<leader>ln", function() vim.diagnostic.goto_next() end, getDesc("Next Definition"))
   vim.keymap.set("n", "<leader>lp", function() vim.diagnostic.goto_prev() end, getDesc("Previous Definition"))
   vim.keymap.set("n", "<leader>lr", function() vim.lsp.buf.rename() end, getDesc("Rename Symbol References"))
-  vim.keymap.set("i", "<leader>lh", function() vim.lsp.buf.signature_help() end, getDesc("Displays Signature Information"))
+  vim.keymap.set("n", "<leader>lh", function() vim.lsp.buf.signature_help() end, getDesc("Displays Signature Information"))
 end)
 
 lsp.setup()
