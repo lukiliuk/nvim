@@ -1,6 +1,6 @@
 local toggleterm = require("toggleterm")
 
-vim.keymap.set({  "n", "t" }, "<leader>t", "<CMD>ToggleTerm<CR>", {
+vim.keymap.set({ "i", "n", "t" }, "<C-t>", "<CMD>ToggleTerm<CR>", {
     desc = "Open floating terminal.",
   })
 
