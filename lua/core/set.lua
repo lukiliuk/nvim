@@ -1,5 +1,7 @@
 --vim.opt.guicursor = ""
 
+-- local opt = require("vim.opt")
+
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
